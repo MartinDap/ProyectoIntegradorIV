@@ -4,10 +4,23 @@
  */
 package com.upeu.demo.Service;
 
+import com.upeu.demo.Entity.PersonaTaller;
+import com.upeu.demo.Entity.Programa;
+import java.util.List;
+
 /**
  *
  * @author Martín Del Águila
  */
 public interface ProgramaService {
-    
+
+    public List<Programa> findAll();
+
+    public Programa findById(Long id);
+
+    public Programa save(Programa programa);
+
+    public void delete(Programa programa);
+
+    public void deleteById(Long id);
 }

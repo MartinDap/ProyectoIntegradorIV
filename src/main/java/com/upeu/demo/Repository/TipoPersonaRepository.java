@@ -4,10 +4,15 @@
  */
 package com.upeu.demo.Repository;
 
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
 /**
  *
  * @author Martín Del Águila
+
  */
-public interface TipoPersonaRepository {
+@Repository
+public interface TipoPersonaRepository extends CrudRepository<TipoPersona, Long>{
     
 }

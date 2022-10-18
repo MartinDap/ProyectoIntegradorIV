@@ -29,18 +29,12 @@ public class PersonaTaller implements Serializable{
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Long petaId;
 
-    @Column(name = "peta_carrera")
-    String petaCarrera;
-
-    @Column(name = "peta_ciclo")
-    String petaCiclo;
+    @ManyToOne //De muchos a uno
+    @Column(name = "tall_id")
+    private Long tallId;
 
     @ManyToOne //De muchos a uno
-    @JoinColumn(name = "tall_id")
-    private Taller taller;
+    @JoinColumn(name = "pers_id")
+    private Long persId;
 
-    //Foreigner Key - tablas unidas de uno a uno a tabla persona
-    @Column(name = "pers_id")
-    String persId;
 }
-

@@ -4,10 +4,15 @@
  */
 package com.upeu.demo.Repository;
 
+import com.upeu.demo.Entity.PersonaTaller;
+import org.springframework.data.repository.CrudRepository;
+import org.springframework.stereotype.Repository;
+
 /**
  *
  * @author Martín Del Águila
  */
-public interface ProgramaRepository {
-    
+@Repository
+public interface ProgramaRepository extends CrudRepository<ProgramaRepository, Long>{
+   
 }
